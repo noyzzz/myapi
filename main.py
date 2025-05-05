@@ -10,3 +10,8 @@ def root():
 def add(a: int, b: int):
     return {"result": a + b}
 
+@app.get("/hello")
+def say_hello(name: str = "world"):
+    return {"message": f"Hello, {name}!"}
+
+
